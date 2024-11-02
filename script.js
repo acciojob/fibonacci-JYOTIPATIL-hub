@@ -1,23 +1,15 @@
-function fibonacci(num) {
-  // Handle base cases
-  if (num === 0) return 0;
-  if (num === 1) return 0;
-  if (num === 2) return 1;
+function fibonacci(n):
+    if n == 1, return 0
+    if n == 2, return 1
 
-  // Initialize the first two Fibonacci numbers
-  let fib1 = 0, fib2 = 1;
+    a = 0
+    b = 1
 
-  // Loop to calculate the nth Fibonacci number
-  for (let i = 3; i <= num; i++) {
-    const fibNext = fib1 + fib2;
-    fib1 = fib2;
-    fib2 = fibNext;
-  }
+    for i = 3 to n:
+        c = a + b
+        a = b
+        b = c
 
-  return fib2;
-}
+    return b
 
-// Test cases
-console.log(fibonacci(1)); // Output: 0
-console.log(fibonacci(5)); // Output: 3
 
